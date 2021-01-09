@@ -1,0 +1,22 @@
+{
+   "type": "postgres",
+   "host": "localhost",
+   "port": 5432,
+   "username": "postgres",
+   "password": "docker123",
+   "database": "api",
+   "synchronize": true,
+   "logging": false,
+   "entities": [
+      "./src/modules/**/infra/typeorm/entities/*.ts"
+   ],
+   "migrations": [
+      "./src/server/typeorm/migrations/*.ts"
+   ],
+   "subscribers": [
+      "./src/subscriber/**/*.ts"
+   ],
+   "cli": {
+      "migrationsDir": "./src/server/typeorm/migrations"
+   }
+}
